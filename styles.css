@@ -196,6 +196,9 @@ p{ margin:0; }
 .project-role{
   font-size:0.82rem; color:var(--blue); font-weight:600; letter-spacing:0.02em; padding-top:4px;
 }
+.project-date{
+  display:inline-block; margin-top:4px; color:var(--text-faint); font-weight:500;
+}
 .project-body h3{ font-size:1.3rem; margin-bottom:12px; }
 .project-body p{ color:var(--text-dim); font-size:0.96rem; line-height:1.7; margin-bottom:10px; }
 .project-impact{ color:var(--text) !important; font-style:italic; }

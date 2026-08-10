@@ -35,6 +35,12 @@ if ('IntersectionObserver' in window && revealEls.length) {
     el.style.transitionDelay = `${Math.min(i % 6, 5) * 60}ms`;
     observer.observe(el);
   });
+
+  // Failsafe: content starts at opacity 0, so if the observer never delivers
+  // (throttled renderer, odd browser), reveal everything rather than show a blank page.
+  setTimeout(() => {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }, 3000);
 } else {
   revealEls.forEach(el => el.classList.add('in-view'));
 }
